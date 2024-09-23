@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int height = 0;
+        Scanner sc = new scanner(system.in);
+        System.out.println("input year of birth: ");
+        height = sc.nextint();
+        System.out.println("input age: ");
+        height = sc.nextint();
+        sc.close();
+    }
+}
