@@ -1,11 +1,11 @@
-package assignement1;
+package assignment1;
 import java.lang.Math;
 import java.util.Scanner;
 /**
  *
  * @author Duncan 957353
  */
-public class Assignement1 {
+public class Assignment1 {
 
     /**
      * @param args the command line arguments
