@@ -1,13 +1,12 @@
 public class Main {
   public static void main(String[] args) {
+    // Make any needed corrections to the code below until it runs
+    // without errors.
 
-    // declare variables to store the type of transport and the number of wheels
-    String transport = "unicycle";
-    int wheels = 1;
+    String LM = "August";
 
-    // display the type of transport and the numbers of wheels
-    System.out.print("A " + transport + " has " + wheels + " wheel.");
+    System.out.printf("The last month was %s.\n", LM);
 
-    ///////////// END of tasks ///////////////////
+    //////////// End of tasks /////////////////////
   }
 }
