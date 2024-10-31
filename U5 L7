@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class IntegerInputExample {
+    public static void main(String[] args) {
+        Scanner kb = new Scanner(System.in); //open for keyboard input
+
+        try {
+            System.out.print("Enter an integer: ");
+            double A = kb.nextInt();
+            System.out.print("Enter an integer: ");
+            double B = kb.nextInt();
+            System.out.println(A/B);
+        } catch (Exception e) {
+            System.out.println("Invalid input. Please enter a valid integer.");
+        } 
+        kb.close();
+    }
+}
