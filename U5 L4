@@ -3,7 +3,7 @@ public class Main {
     // Make any needed corrections to the code below until it runs
     // without errors.
 
-    String LM = "August";
+    String LM = "December";
 
     System.out.printf("The last month was %s.\n", LM);
 
