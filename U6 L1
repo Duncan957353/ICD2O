@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+ public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  try {
+    System.out.print("please enter the chance precipitation as a decimal fraction(0 to 1): ");
+    float chance = sc.nextInt();
+    if (chance < 0.07) {
+     System.out.print("The forecast is dry weather.");
+    } else if (chance > 0.6) {
+      System.out.print("The forecast is rain.");
+    } else {
+    System.out.print("The forecast is a small chance of rain.");
+    }
+  } catch (Exception e) {
+    System.out.print("invalid input");
+  }
+ }
+}
