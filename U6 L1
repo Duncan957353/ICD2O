@@ -5,7 +5,7 @@ public class Main {
   Scanner sc = new Scanner(System.in);
   try {
     System.out.print("please enter the chance precipitation as a decimal fraction(0 to 1): ");
-    float chance = sc.nextInt();
+    double chance = sc.nextDouble();
     if (chance < 0.07) {
      System.out.print("The forecast is dry weather.");
     } else if (chance > 0.6) {
