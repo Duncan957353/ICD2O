@@ -1,0 +1,19 @@
+{
+   public static void main(String [] args) {
+      // enter your code here!
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Please enter a percentage mark: ");
+      int Mark = sc.nextInt();
+      if (Mark >= 80) {
+        System.out.printf(Mark + " is a letter grade of A.");
+      } else if (Mark >= 70) {
+        System.out.printf(Mark + " is a letter grade of B.");
+      } else if (Mark >= 60) {
+        System.out.printf(Mark + " is a letter grade of C.");
+      } else if (Mark >= 50) {
+        System.out.printf(Mark + " is a letter grade of D.");
+      } else if (Mark < 50) {
+        System.out.printf(Mark + " is a letter grade of F.");
+      }
+   }
+}
