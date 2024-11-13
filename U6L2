@@ -1,0 +1,29 @@
+// any import statements go here!
+import java.util.Scanner;
+
+public class Calc {
+    public static void main(String[] args) {
+        // Your code goes here!
+        Scanner sc = new Scanner(System.in);
+        try {
+        System.out.print("enter the first number: ");
+        double Num1 = sc.nextDouble();
+        System.out.print("enter an operator: ");
+        String operator = sc.next();
+        System.out.print("enter the second number: ");
+        double Num2 = sc.nextDouble();
+        if (operator.equals("+")) {
+          System.out.print(Num1 + Num2);
+        } else if (operator.equals("-")) {
+          System.out.print(Num1 - Num2);
+        } else if (operator.equals("*")) {
+          System.out.print(Num1 - Num2);
+        } else if (operator.equals("/")) {
+          System.out.print(Num1 - Num2);
+        }
+        } catch (Exception e) {
+          System.out.print("invalid input");
+        }
+        // Your code stops here!
+    }
+}
