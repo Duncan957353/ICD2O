@@ -1,0 +1,19 @@
+// any import statements go here!
+import java.util.Scanner;
+
+public class Calc {
+  public static void main(String[] args) {
+    // Your code goes here!
+    Scanner sc = new Scanner(System.in);
+    System.out.print("enter the factorial: ");
+    int n = sc.nextInt();
+    int fac = n;
+    int N = n;
+    while (n>1) {
+      n = n - 1;
+      fac = fac*n;
+    }
+    System.out.printf("the factorial " + N + "! = " + fac);
+    // Your code stops here!
+  }
+}
