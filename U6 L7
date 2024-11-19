@@ -1,0 +1,27 @@
+// any import statements go here!
+import java.util.Scanner;
+
+public class Calc {
+  public static void main(String[] args) {
+    // Your code goes here!
+    Scanner sc = new Scanner(System.in);
+    int guess = 1;
+    int num = 3;
+    int tries = 5;
+    do {
+      System.out.print("guess the number (1 to 10)");
+      guess = sc.nextInt();
+      if ((num > guess) || (num < guess)){
+        System.out.println("Incorrect");
+      }
+      tries = tries - 1;
+      System.out.println(tries);
+      if (tries = 0) break;
+    } while ((guess < num) || (guess > num));
+    if (tries > 0) {
+    System.out.print("Right answer");
+    }
+    else System.out.print("you lose");
+    // Your code stops here!
+  }
+}
