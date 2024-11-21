@@ -1,0 +1,15 @@
+// any import statements go here!
+import java.util.Scanner;
+
+public class Emoji {
+    public static void main(String[] args) {
+      // Your code starts here!
+        long emoji = 0x1f600;
+      do {  
+        emoji = emoji + 0x1;
+        String uChar = new String(Character.toChars((int) emoji));
+        System.out.printf("%4h\t%s\n", emoji, uChar);
+      } while (emoji != 0x1f64f);
+      // Your code stops here!
+    }
+}
