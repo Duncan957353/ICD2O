@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignement2;
+import java.lang.Math;//adds the math library
+import java.util.Scanner;//adds the scanner library
+/**
+ *
+ * @author 957353
+ */
+public class Assignement2 {
+
+    /**
+     * @param args the command line arguments
+     */
+public static void main(String[] args) {
+    // TODO code application logic here
+    Scanner sc = new Scanner(System.in);//prepares keyboard for input
+    System.out.print("enter a whole number: ");
+    int n = sc.nextInt();
+    int first = n;
+    do { 
+        if (n == 1) break;
+        if (n %2 == 0) {
+        n = n / 2;
+        } else {
+            n = n * 3 + 1;
+        }
+        System.out.print(n + "; ");
+    } while (n != 1);
+    System.out.print("the Collatz sequence for " + first + " is: " + first + "; ");
+    }
+}
