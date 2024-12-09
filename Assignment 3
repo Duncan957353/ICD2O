@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package assignment.pkg3;
+import java.lang.Math;
+import java.util.Scanner;
+/**
+ *
+ * @author 957353
+ */
+public class Assignment3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        char rock = 0;
+        char paper = 1;
+        char scissors = 2;
+        boolean repeat = true;
+        do {
+        double game = (3*Math.random());
+        System.out.print("how many games do you want to play: ");
+        int rounds = sc.nextInt();
+        System.out.print("please choose rock paper or scissors.(R,P,S): ");
+        char choice = sc.nextLine().toUpperCase().charAt(0);
+            if (game == 'R') {
+                if (rock == choice) System.out.print("the host chose rock. tie!");
+            } else if (paper == choice + 1) {
+                System.out.print("the host chose paper. you lose!");
+            } else System.out.print("the host chose scissors. you win!");;
+            rock = 'R';
+            paper = 'P';
+            scissors = 'S';
+            if (rounds != 0) {
+            rounds = rounds - 1;
+            } else {
+            repeat = false;
+            }
+        } while (repeat == true);
+    } 
+}
