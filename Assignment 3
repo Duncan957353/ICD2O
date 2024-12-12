@@ -71,6 +71,6 @@ public class Assignment3 {
             rounds = rounds - 1;
             if (rounds == 0) repeat = false;
         } while (repeat == true);
-        System.out.print("");
+        System.out.println("wins: " + wins + " losses: " + losses + " ties: " + ties);
     } 
 }
