@@ -1,52 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Duncan 957353
  */
 package assignement2;
 import java.lang.Math;
 import java.util.Scanner;
-/**
- *
- * @author 957353
- */
-public class Assignement2 {
 
-    /**
-     * @param args the command line arguments
-     */
-public static void main(String[] args) {
-    // TODO code application logic here
-    Scanner sc = new Scanner(System.in);
-    boolean repeat = true;
+public class Assignement2 {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        boolean repeat = true;//sets repeat to true
         do {
             System.out.print("enter a whole number: ");
-            int num = sc.nextInt();
+            int num = sc.nextInt();//assigns num as their input
             sc.nextLine();
+            if (num <= 1) {//stops infinite loops
+                    System.out.println("please give a valid input");
+                    if (num <= 1) break;
+            }
             int first = num;
             int term = 1;
             int high = num;
             System.out.print("the Collatz sequence for " + first + " is: " + first + "; ");
-            do { 
-                if (num == 1) break;
-                if (num %2 == 0) {
+            
+            do {
+                if (num %2 == 0) {//checks if the number is even
                 num = num / 2;
                 } else {
                     num = num * 3 + 1;
                 }
                 term = term + 1;
-                System.out.print(num + "; ");
-                if (num > high) {
+                if (num == 1) break;//ends the loop to prevent a semi colon at the end
+                System.out.print(num + "; ");//prints every term
+                if (num > high) {//if num is higher than high set high as equal to num
                     high = num;
                 }
             } while (num != 1);
-            System.out.println();
-            System.out.println("number of terms " + term);
-            System.out.println("highest value reached " + high);
+            if (num <= 1) break;
+            System.out.println(num);
+            System.out.println("number of terms " + term);//prints the number of terms
+            System.out.println("highest value reached " + high);//prints the highest value
             System.out.print("Do another? (y/n) ");
-            char again = sc.nextLine().toUpperCase().charAt(0);
-            if (again == 'N') repeat = false;
-        } while (repeat == true); 
+            char again = sc.nextLine().toUpperCase().charAt(0);//takes their input capitalizes it and sets it as again
+            if (again == 'N') repeat = false;//if again is equal to N then set repeat to false
+        } while (repeat == true); //repeats while repeat is true
         System.out.println("goodbye");
     }
 }
