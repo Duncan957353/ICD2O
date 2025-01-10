@@ -1,0 +1,16 @@
+import java.lang.Math;
+class Main {
+  public static int oneDie(int sides) {
+      int value = (int) (Math.random() * sides) + 1;
+      
+      return value;
+}
+  
+  public static void main(String [] args) {
+      double roll = 0;
+      double min = 0;
+      roll = oneDie(6);
+      roll = roll + min;
+      System.out.println(roll);
+  }
+}
