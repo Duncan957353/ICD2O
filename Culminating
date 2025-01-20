@@ -17,22 +17,34 @@ public class Culminating {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        double start;
+        double purchase;
+        double payment;
         String i;
+        String fileName = "ledger.dat";
         int amount = 0;
-        int repeat = 5;
-    
+        String j = "BA";
+        double interest = 0.28 / 12 + 1; 
     try {
-    do {   
         Scanner fh = new Scanner(new File("C:\\Users\\957353\\Documents\\NetBeansProjects\\Culminating\\src\\culminating\\ledger.dat"));
-        i = fh.nextLine();
-        System.out.println(i);
-        fh.close();
+    do {
+        i = fh.next();
+        if (i.toLowerCase().compareTo(j.toLowerCase()) > 0) break;
+        System.out.print(i + "          ");
         amount = amount + 1;
-        repeat = repeat - 1;
-     } while  (repeat > 0);
-    System.out.println("amount of customers: " + amount);
+        start = fh.nextDouble();
+        purchase = fh.nextDouble();
+        payment = fh.nextDouble();
+        double balance = interest * start - payment + purchase;
+        
+     } while (i != j);
+    fh.close();
+    System.out.println("highest final balance: " + start);
+    System.out.println("Lowest final balance: " + purchase);
+    System.out.println("average balance: " + payment);
     } catch (Exception e) {
         System.out.println(e.getMessage());
     }
-  }   
+    } 
 }
+
