@@ -18,47 +18,47 @@ public class Culminating {
     public static void main(String[] args) {
         // TODO code application logic here
         double average = 0;
-        String highest = "ee";
-        String lowest = "ee";
-        double high = 1;
-        double low = 999999999;
+        String highest = "ee";//placeholder for the highest account
+        String lowest = "ee";//placeholder for the lowest account
+        double high = 1;//placeholder for the highest final balance 
+        double low = 999999999;//placeholder for the lowest final balance
         double balance;
         double start;
         double purchase;
         double payment;
-        String i;
+        String i;//string for the account name
         String fileName = "ledger.dat";
         int amount = 0;
-        String j = "BA";
+        String j = "BA";//end of file identifier
         double interest = 0.28 / 12 + 1; 
         try {
             Scanner fh = new Scanner(new File("C:\\Users\\957353\\Documents\\NetBeansProjects\\Culminating\\src\\culminating\\ledger.dat"));
         do {
-            i = fh.next();
-            if (i.toLowerCase().compareTo(j.toLowerCase()) > 0) break;
+            i = fh.next();//assigns i as the account name
+            if (i.toLowerCase().compareTo(j.toLowerCase()) > 0) break;//ends the loop once the file hsa ended
             System.out.print(i + "         ");
-            amount = amount + 1;
-            start = fh.nextDouble();
-            purchase = fh.nextDouble();
-            payment = fh.nextDouble();
-            balance = interest * start - payment + purchase;
+            amount = amount + 1;//increases the count of amount
+            start = fh.nextDouble();//assigns start as the starting balance
+            purchase = fh.nextDouble();//assigns purchase as their last purchase
+            payment = fh.nextDouble();//assigns payment as their last payment
+            balance = interest * start - payment + purchase;//assigns balance as their new balance
             System.out.printf("%6.2f\n", balance);
-            System.out.print("");
-            if (low > balance) {
+            System.out.print("");//making a new line
+            if (low > balance) {//if low is higher than the current balance assign the current balance as low
                 low = balance;
                 lowest = i;
             }
-            if (high < balance) { 
+            if (high < balance) {//if high is lower than the current balance assign the current balance as high 
                 high = balance;
                 highest = i;
             }
-            average = average + balance;
+            average = average + balance;//adds all the balances together as average
         } while (i != j);
-        fh.close();
-        System.out.printf("highest final balance: " + highest + "          %6.2f\n", high);
-        System.out.printf("Lowest final balance:  " + lowest + "          %6.2f\n", low);
-        System.out.printf("average balance: %.2f\n", average / amount);
-        } catch (Exception e) {
+        fh.close();//closes the file
+        System.out.printf("highest final balance: " + highest + "          %6.2f\n", high);//prints the highest balance
+        System.out.printf("Lowest final balance:  " + lowest + "          %6.2f\n", low);//prints the lowest balance
+        System.out.printf("average balance: %.2f\n", average / amount);//prints the average balance after dividing the total
+        } catch (Exception e) {//catches errors
         System.out.println(e.getMessage());
         }
     } 
