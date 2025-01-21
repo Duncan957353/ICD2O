@@ -42,7 +42,7 @@ public class Culminating {
             purchase = fh.nextDouble();
             payment = fh.nextDouble();
             balance = interest * start - payment + purchase;
-            System.out.printf("%.2f\n", balance);
+            System.out.printf("%6.2f\n", balance);
             System.out.print("");
             if (low > balance) {
                 low = balance;
@@ -55,9 +55,9 @@ public class Culminating {
             average = average + balance;
         } while (i != j);
         fh.close();
-        System.out.printf("highest final balance: " + highest + "          %.2f\n", high);
-        System.out.printf("Lowest final balance:  " + lowest + "          %.2f\n", low);
-        System.out.println("average balance: " + average / amount);
+        System.out.printf("highest final balance: " + highest + "          %6.2f\n", high);
+        System.out.printf("Lowest final balance:  " + lowest + "          %6.2f\n", low);
+        System.out.printf("average balance: %.2f\n", average / amount);
         } catch (Exception e) {
         System.out.println(e.getMessage());
         }
